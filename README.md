@@ -1,5 +1,6 @@
 # Photo AWS Rekognition
 _(and sorting within separate folders)_
+
 My friend Elder is a professional sports photographer. 
 He usually leaves his camera automatically taking photos at a sporting event. 
 Elder's challenge is to visually and manually sort through the thousands of photos from an event, spending time and often not even doing the task, given the difficulty.

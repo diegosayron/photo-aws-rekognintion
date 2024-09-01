@@ -31,6 +31,10 @@ If you want to further automate the recognition process, consider using this cod
 Any photos uploaded to a bucket can trigger a lambda to classify the content.
 
 
+If this code helped you, please let me know by clicking the star button to motivate me to create more AI content.
+
+
+
 
 
 

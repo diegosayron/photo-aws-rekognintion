@@ -14,13 +14,13 @@ rekognition_client = boto3.client('rekognition')
 
 # Settings
 bucket_name = 'photos-elder'
-pasta_com_pessoas = 'with-people/'
+folder_with_people = 'with-people/'
 folder_without_people = 'without-people/'
 
 def move_image(file_name, destin_folder):
     copy_source = {'Bucket': bucket_name, 'Key': file_name}
-    novo_file_name = destin_folder + file_name.split('/')[-1]
-    s3_client.copy_object(CopySource=copy_source, Bucket=bucket_name, Key=novo_file_name)
+    new_file_name = destin_folder + file_name.split('/')[-1]
+    s3_client.copy_object(CopySource=copy_source, Bucket=bucket_name, Key=new_file_name)
     s3_client.delete_object(Bucket=bucket_name, Key=file_name)
 
 def verify_people_in_photo(file_name):
@@ -47,11 +47,11 @@ def image_processing():
             there_is_people = verify_people_in_photo(file_name)
             
             if there_is_people:
-                move_image(file_name, pasta_com_pessoas)
-                print(f"Movido para '{pasta_com_pessoas}': {file_name}")
+                move_image(file_name, folder_with_people)
+                print(f"Moved to '{folder_with_people}': {file_name}")
             else:
                 move_image(file_name, folder_without_people)
-                print(f"Movido para '{folder_without_people}': {file_name}")
+                print(f"Moved to '{folder_without_people}': {file_name}")
 
 if __name__ == "__main__":
     image_processing()

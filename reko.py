@@ -2,8 +2,16 @@
 # 0 - Python (Used 3.12.15)
 # 1 - Configure the python virtual environment: python -m venv reko 
 # 2 - Activate the venv created: .\reko\Scripts\activate
-# 3 - Install boto3: pip install boto3 (verify: pip show boto3)
-# 4 - Adapt the source code for your scenario: 
+# 3 - Install boto3: visual studio code - Terminal - type: pip install boto3 (verify: pip show boto3)
+# 4 - AWS Account:
+#     - CLI account configured in AWS IAM, with permissions for AWS Rekognition and S3 (SAVE and copy the ACCESS KEY ID and Secret Access Key credentials)
+#     - Download and install the aws cli (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+#     - In your PC - Windows cmd or other:
+#       - aws configure 
+#         - Fill with your credentials and preferences (Access Key ID, Secret Access Key, The region of your created S3 bucket eg. us-east-1, output format: table, etc) 
+#     - S3 bucket configured in default mode (non-public and ACLs disabled) named, for example, elders-photos and fill it with some photos
+#       - Create two folders inside it: with-people/ and without-people/
+# 5 - Adapt the source code to your scenario: 
 
 
 import boto3

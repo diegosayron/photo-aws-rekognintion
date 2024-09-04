@@ -11,7 +11,7 @@
 #         - Fill with your credentials and preferences (Access Key ID, Secret Access Key, The region of your created S3 bucket eg. us-east-1, output format: table, etc) 
 #     - S3 bucket configured in default mode (non-public and ACLs disabled) named, for example, elders-photos and fill it with some photos
 #       - Create two folders inside it: with-people/ and without-people/
-# 5 - Adapt the source code to your scenario: 
+# 5 - Adapt the source code to your scenario (and run it!): 
 
 
 import boto3
